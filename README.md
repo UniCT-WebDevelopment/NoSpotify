@@ -3,8 +3,7 @@
 
 # NoSpotify
 
-[![angular-nodejs.webp](https://i.postimg.cc/FsS3yw6j/angular-nodejs.webp)](https://postimg.cc/0b8zxXPQ)
-
+[![angular-nodejs.webp](https://i.postimg.cc/g2qh58mj/angular-nodejs.webp)](https://postimg.cc/9D0zw44H)
 # Features
 
 - Listen to all your music, search for a specific track, band or artist.
