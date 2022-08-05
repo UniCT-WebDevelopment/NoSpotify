@@ -599,7 +599,8 @@ export class PlayerComponent implements OnInit {
 
 
   deleteSongFromPlaylist(index) {
-    this.playerService.removeFromPlayList(index)
+    this.playerService.removeFromPlayList(index);
+    this.playlist = _.cloneDeep(this.playerService.currPlayList);
   }
 
   openPlaylistList() {

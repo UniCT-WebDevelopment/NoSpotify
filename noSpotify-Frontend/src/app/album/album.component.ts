@@ -80,7 +80,7 @@ export class AlbumComponent implements OnInit, OnDestroy {
 
   checkCurrentSong(id) {
     try {
-      if (!this.ytService || !this.ytService.videoId) return true
+      if (!this.ytService || !this.ytService.videoId) return false
       if (this.ytService.getState() + "" == "playing" && this.ytService.videoId == id) return true;
 
       return false

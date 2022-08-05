@@ -80,8 +80,8 @@ export class PlayerService {
 
   removeFromPlayList(index) {
     try {
-      this.currPlayList.splice(index, 1);
       this.model$.emit({ playlist: this.currPlayList, type: "remove", index });
+      this.currPlayList.splice(index, 1);
     } catch (e) { }
   }
 
