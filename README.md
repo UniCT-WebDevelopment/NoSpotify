@@ -22,11 +22,27 @@ NoSpotify requires
 - [Docker](https://docs.docker.com/)
 
 First time setup
+
+- Configure backend config file
+
+```sh
+{   //MONGODB CONNECTION STRING (CHECK DOCKER-COMPOSE FOR CREDENTIALS)
+    "connectionString": "mongodb://root:rootPassword@localhost:27017/?authSource=admin",
+    "secret": "$3cr3tSeRver!", //JWT ENCRYPTION SECRET KEY
+    "spotifyEmail":"", //EMAIL ACCOUNT SPOTIFY DEVELOPER
+    "spotifyPassword":"", //PASSWORD ACCOUNT SPOTIFY DEVELOPER
+    "spotifyAppId":""  //APP-ID SPOTIFY DEV APP
+}
+```
+- Setup enviroment
+
 ```sh
 $ make run-db
 $ make init-backend
 $ make init-frontend
 ```
+
+Other commands
 
 Clean the development environment (refresh node modules and start)
 ```sh
@@ -37,6 +53,13 @@ $ make clear-frontend
 Build GUI (dist folder)
 ```sh
 $ make build-frontend
+```
+
+Run 
+```sh
+$ make run-frontend
+$ make run-backend
+
 ```
 
 # Author
