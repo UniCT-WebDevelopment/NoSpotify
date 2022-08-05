@@ -7,8 +7,10 @@
 
 <p align="center">
   <img width="500" height="300" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
-    <img width="500" height="300" src="https://i.postimg.cc/C5TbBggr/angular-nodejs.webp">
+</p>
 
+<p align="center">
+    <img width="500" height="300" src="https://i.postimg.cc/C5TbBggr/angular-nodejs.webp">
 </p>
 
 
