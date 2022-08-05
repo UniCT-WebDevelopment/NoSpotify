@@ -6,7 +6,7 @@
 
 
 <p align="center">
-  <img width="500" height="300" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
+  <img width="450" height="200" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
 </p>
 
 <p align="center">
