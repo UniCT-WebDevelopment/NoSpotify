@@ -20,11 +20,17 @@ NoSpotify requires
 - [Node.js](https://nodejs.org/) v16+.
 - [Angular](https://angular.io/) v10+.
 
-
+First time setup
 ```sh
 $ make run-db
 $ make init-backend
 $ make init-frontend
+```
+
+Clean the development environment (refresh node modules and start)
+```sh
+$ make clear-backend
+$ make clear-frontend
 ```
 
 # Author
