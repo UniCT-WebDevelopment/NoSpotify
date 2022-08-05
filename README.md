@@ -4,6 +4,7 @@
 # NoSpotify
 
 [![Angular-full-color-logo.png](https://i.postimg.cc/m2gKhN6f/Angular-full-color-logo.png)](https://postimg.cc/yW2Lb9Hv)
+[![no349nf36-nodejs-logo-node-js-logo-nodejs-free-vector-graphic-on-liblogo.png](https://i.postimg.cc/7h6XPXPK/no349nf36-nodejs-logo-node-js-logo-nodejs-free-vector-graphic-on-liblogo.png)](https://postimg.cc/qhP2js3K)
 # Features
 
 - Listen to all your music, search for a specific track, band or artist.
