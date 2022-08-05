@@ -20,8 +20,8 @@
 
 
 <div align="center">
-  <img width="500" src="https://i.postimg.cc/bJQPLbZT/Screenshot-from-2022-08-05-13-26-58.png">
-    <img width="500" src="https://i.postimg.cc/XqJ2X66C/Screenshot-from-2022-08-05-13-27-47.png">
+  <img width="400" src="https://i.postimg.cc/bJQPLbZT/Screenshot-from-2022-08-05-13-26-58.png">
+    <img width="400" src="https://i.postimg.cc/XqJ2X66C/Screenshot-from-2022-08-05-13-27-47.png">
 
 </div>
 
@@ -91,13 +91,16 @@ $ make run-backend
 
 ```
 
-# Include Spotify Import  [BETA]
+# Include Spotify Import  [BETA 🔨]
 In order to use the import function from spotify you need to create a spotify app through the [developer panel](https://developer.spotify.com/)
 and insert email, password and client id in the configuration file (backend config file).
 It is also necessary to insert the correct CLIENT_ID in angular enviroment config file.
 
 
 
+<p align="center">
+  <img  src="https://i.postimg.cc/WbThxmcx/Screenshot-from-2022-08-05-13-29-37.png">
+</p>
 
 
 # Author 💻 👦
