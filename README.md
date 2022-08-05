@@ -91,6 +91,15 @@ $ make run-backend
 
 ```
 
+# Include Spotify Import  [BETA]
+In order to use the import function from spotify you need to create a spotify app through the [developer panel](https://developer.spotify.com/)
+and insert email, password and client id in the configuration file (backend config file).
+It is also necessary to insert the correct CLIENT_ID in the callback made by the angular client
+Function 'loginSpotify' [Playlist-List.component.ts]
+
+
+
+
 # Author 💻 👦
 NoSpotify has been developed by Mirko Distefano, Computer Science student at Department of Mathematics and Computer Science, University of Catania, Italy. 
 
