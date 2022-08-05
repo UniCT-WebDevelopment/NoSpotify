@@ -3,10 +3,11 @@
 
 # NoSpotify
 
-### DEMO [NoSpotify](http://nospotify.me)
 
 
 <p align="center">
+  ### DEMO [NoSpotify](http://nospotify.me:4000)
+
   <img width="450" height="200" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
 </p>
 
