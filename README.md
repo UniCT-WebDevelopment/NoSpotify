@@ -3,10 +3,11 @@
 
 # NoSpotify
 
-->[![nospotifylogo.png](https://i.postimg.cc/fRLSbLdT/nospotifylogo.png)](https://postimg.cc/vcJZqGXp)<-
 
 
-
+<p align="center">
+  <img width="460" height="300" src="[http://www.fillmurray.com/460/300](https://i.postimg.cc/fRLSbLdT/nospotifylogo.png)">
+</p>
 
 
 [![angular-nodejs.webp](https://i.postimg.cc/C5TbBggr/angular-nodejs.webp)](https://postimg.cc/sQmMqb15)
