@@ -10,7 +10,7 @@
   <img width="450" height="200" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
 </p>
 
-### Live ([Demo](http://nospotify.me:4000)
+### Live [Demo](http://nospotify.me:4000)
 
 
 
