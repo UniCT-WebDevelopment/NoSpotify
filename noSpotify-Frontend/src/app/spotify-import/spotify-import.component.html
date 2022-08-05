@@ -1,0 +1,37 @@
+<div class="modalSpotyStyle">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="titleModal">
+
+            <ng-container>
+                Spotify Playlist
+            </ng-container>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <ul class="list-group" *ngIf="this.playLists && this.playLists.length">
+        <li class="list-group-item itemPlaylistList" *ngFor="let playlist of playLists">
+
+            <div class="d-flex justify-content-between cursorPointer"
+                (click)="importPlaylist(playlist.id,playlist.name)">
+                <div class="cursorPointer"> {{playlist.name}}
+                </div>
+
+            </div>
+
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="backgoundBlock">
+
+</div>

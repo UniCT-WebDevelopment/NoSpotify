@@ -1,0 +1,724 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+a {
+  cursor: pointer
+}
+
+.app-container {
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.btn-delete-user {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: rgba(27, 28, 30, 1);
+}
+
+#sidebar-wrapper {
+  border-right: 3px solid #bfbaba !important;
+  min-height: 100vh;
+  margin-left: -22rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  // width: 15rem;
+  margin-top: 20px;
+}
+
+#page-content-wrapper {
+
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+
+
+@media (min-width: 768px) {
+  .leftdiv {
+    border-right: 1px solid gray
+  }
+
+  .hidemobile {
+    display: block;
+  }
+
+  .playerBar {
+    border-top: 1px solid #1ed760;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    align-items: center;
+    background: rgba(27, 28, 30, 1);
+    padding: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #sidebar-wrapper {
+    z-index: 9999;
+  }
+
+  // .list-group-item {
+  //   padding: 0px !important;
+  // }
+
+  .hidemobile {
+    display: none;
+  }
+
+  .playerBar {
+    border-top: 1px solid #1ed760;
+    // height: 190px;
+    font-size: 25px;
+    flex-wrap: wrap;
+    color: white;
+    align-items: center;
+    background: rgba(27, 28, 30, 1);
+    // padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .wLogoMobile {
+    width: 400px !important;
+  }
+
+}
+
+
+
+@media (min-width: 768px) {
+  .albumInfo {
+    left: 300px
+  }
+
+
+  #posterArtist {
+    width: 300px;
+  }
+
+  .showHidePlayer {
+    display: block;
+  }
+
+  .playerYoutube {
+    display: unset;
+    position: fixed;
+    bottom: -34px;
+    right: -160px;
+    transform: scale(0.5);
+  }
+
+  .showBtnMenuMobile {
+    display: none;
+
+  }
+
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+
+  }
+
+  .show {
+    margin-left: 0 !important;
+  }
+
+  .hide {
+    margin-left: -22rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .albumInfo {
+    left: 0px
+  }
+
+  .showBtnMenuMobile {
+    display: flex;
+    justify-content: end;
+    position: relative;
+  }
+
+  #posterArtist {
+    width: 100%;
+  }
+
+  .playerYoutube {
+    display: none;
+    position: fixed;
+    bottom: -34px;
+    right: -160px;
+    transform: scale(0.5);
+  }
+
+  .showHidePlayer {
+    display: none;
+  }
+
+  .show {
+    margin-left: -15 !important;
+  }
+
+  .hide {
+    margin-left: -0 !important;
+  }
+}
+
+.bgcolor {
+  background: rgba(27, 28, 30, 1);
+  color: #1ed760;
+  font-weight: bold;
+}
+
+.list-group-item-action:hover {
+  background-color: gray;
+  color: white;
+}
+
+.imgCover {
+  position: relative;
+  height: 260px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imgBanner {
+  filter: drop-shadow(2px 4px 6px black);
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+  position: absolute;
+  bottom: 0;
+  width: 500px;
+
+}
+
+.colorSpotify {
+  color: #1ed760;
+}
+
+.btn-spotify {
+  background-color: #1ed760;
+}
+
+.btn-spotify:hover {
+  background-color: #138b3d;
+}
+
+.searchBarAppend {
+  background-color: #1ed760;
+  color: white;
+  border: 1px solid #1ed760;
+
+}
+
+.searchBar:focus {
+  color: white;
+  background-color: transparent;
+  border: 1px solid #1ed760;
+}
+
+.searchBar {
+  color: white;
+  background-color: transparent;
+  border: 1px solid #1ed760;
+}
+
+input[type=range] {
+  background-color: transparent;
+  height: 24px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 1px #002200;
+  background: #35363593;
+  border-radius: 50px;
+  border: 0px solid #18D501;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 6px #1ED760;
+  border: 0px solid #1ED760;
+  height: 18px;
+  width: 18px;
+  border-radius: 23px;
+  background: #4DAD4D;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+
+// input[type=range]:focus::-webkit-slider-runnable-track {
+//   background: #1ED760;
+// }
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 1px #002200;
+  background: #35363593;
+  border-radius: 50px;
+  border: 0px solid #18D501;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 6px #1ED760;
+  border: 0px solid #1ED760;
+  height: 18px;
+  width: 18px;
+  border-radius: 23px;
+  background: #4DAD4D;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #1ED760;
+  border: 0px solid #18D501;
+  border-radius: 100px;
+  box-shadow: 0px 0px 1px #002200;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #1ED760;
+  border: 0px solid #18D501;
+  border-radius: 100px;
+  box-shadow: 0px 0px 1px #002200;
+}
+
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 6px #1ED760;
+  border: 0px solid #1ED760;
+  height: 18px;
+  width: 18px;
+  border-radius: 23px;
+  background: #4DAD4D;
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #1ED760;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #1ED760;
+}
+
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  background: #1ed760;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+
+  background: #1ed760;
+}
+
+.modal-content {
+  background-color: rgba(27, 28, 30, 1) !important;
+
+}
+
+
+.itemPlaylist {
+  background: transparent;
+  font-weight: 500;
+  color: white;
+}
+
+.itemPlaylistList {
+
+  background: transparent;
+  font-weight: 500;
+  color: white;
+  border-bottom: 1px solid #1ad5016b;
+
+}
+
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  height: 100% !important;
+}
+
+.initialVideo {
+  position: fixed;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  background-color: #002200;
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  flex-flow: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+.btnLogin {
+  padding-left: 34px !important;
+  padding-right: 34px !important;
+  border-radius: 30px;
+}
+
+
+.containerHome {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100% !important;
+}
+
+
+.wrapHome {
+  position: relative;
+  height: 100%;
+}
+
+.filterShadow {
+  filter: drop-shadow(5px 8px 3px black);
+}
+
+
+.filterBrightness {
+  filter: brightness(0.8);
+}
+
+.w-70-perc {
+  width: 70%;
+}
+
+
+
+.w-30-perc {
+  width: 30%;
+}
+
+
+.whitespaceNoWrap {
+  white-space: nowrap
+}
+
+.p-10px {
+  padding: 10px;
+}
+
+.cursorPointer {
+  cursor: pointer
+}
+
+.p-15px {
+  padding: 15px;
+}
+
+.h-180px {
+  height: 180px;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.titleModal {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-top: 30px;
+  color: #1ed760;
+}
+
+.font40px {
+  font-size: 40px !important
+}
+
+
+.font50px {
+  font-size: 50px !important;
+}
+
+.font22px {
+  font-size: 22px !important;
+}
+
+
+.font20px {
+  font-size: 20x !important; 
+}
+
+.font15px {
+  font-size: 15px !important
+}
+
+.font32px {
+  font-size: 32px !important;
+}
+
+
+.font20px {
+  font-size: 20px !important;
+}
+
+.font25px {
+  font-size: 25px !important;
+}
+
+
+.loginCard {
+  margin: 20%;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+
+.loginGradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(124deg, rgba(0, 0, 0, 0) 0%, rgb(80 25 123) 10%, rgb(73 36 36) 100%);
+  height: 100%;
+}
+
+
+.playlistModalTitle {
+  font-size: 20px;
+  font-weight: 500
+}
+
+.mn-w45px {
+  min-width: 45px;
+}
+
+.w-40p {
+  width: 40%;
+}
+
+.zindex--1 {
+  z-index: -1;
+}
+
+.zindex-2 {
+  z-index: 2;
+}
+
+
+.playerSubtitle {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.playerMainTitle {
+  color: #1ed760;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.gradientRegistration {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(124deg, rgba(0, 0, 0, 0) 0%, rgb(80 25 123) 10%, rgb(73 36 36) 100%);
+  height: 100%;
+}
+
+.registerCard {
+  margin: 20%;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+
+.mainContainerFluid {
+  overflow-x: hidden;
+  overflow-y: scroll
+}
+
+.bottom-min15 {
+  bottom: -15px
+}
+
+.line-height-1 {
+  line-height: 1.0 !important
+}
+
+
+.line-height-34 {
+  line-height: 34px !important
+}
+
+.overflowx-scroll {
+  overflow-x: scroll;
+}
+
+.font-size-70px {
+  font-size: 70px !important; 
+}
+
+.font-size-40px {
+  font-size: 40px !important;
+}
+
+
+
+.btnPlaylist {
+  font-size: 50px;
+  width: fit-content;
+}
+
+.w-40px {
+  width: 40px !important
+}
+
+.ml-10px {
+  margin-left: 10px !important;
+}
+
+.pt-50px {
+  padding-top: 50px !important
+}
+
+
+.margin-top-100px {
+  margin-bottom: 100px !important
+}
+
+.h-200px {
+  height: 200px
+}
+
+
+.albumListOption {
+  font-size: 50px;
+  width: fit-content;
+}
+
+
+.bx{
+  .cursorPointer 
+}
+
+.list-group-item.active{
+  background-color: #1ed760 !important;
+  border:0px 
+}

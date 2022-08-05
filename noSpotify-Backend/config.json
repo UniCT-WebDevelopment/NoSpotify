@@ -1,0 +1,7 @@
+﻿{
+    "connectionString": "mongodb://root:rootPassword@localhost:27017/?authSource=admin",
+    "secret": "$3cr3tSeRver!",
+    "spotifyEmail":"",
+    "spotifyPassword":"",
+    "spotifyAppId":""
+}

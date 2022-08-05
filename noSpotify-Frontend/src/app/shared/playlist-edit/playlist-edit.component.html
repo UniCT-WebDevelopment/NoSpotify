@@ -1,0 +1,86 @@
+<div class="modalStyle">
+
+    <h2>Creazione Playlist</h2>
+
+    <form>
+        <div class="form-row align-items-center">
+            <div class="col">
+                <label class="">Nome Playlist</label>
+                <input type="text" [(ngModel)]="this.playlist.playlistName" [ngModelOptions]="{standalone: true}"
+                    class="form-control mb-2" id="inlineFormInput" placeholder="La mia nuova playlist">
+            </div>
+
+            <div class="col">
+                <div class="form-check checkbox-modal ml-2">
+
+                    <input class="form-check-input " type="checkbox" id="autoSizingCheck"
+                        [(ngModel)]="this.playlist.public" [ngModelOptions]="{standalone: true}">
+                    <label class="form-check-label" for="autoSizingCheck">
+                        Rendi la Playlist pubblica
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-row align-items-center">
+            <div class="col">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="file" (change)="handleFileInput($event.target.files)">
+                    <label class="custom-file-label" for="customFile">Carica playlist</label>
+                  </div>
+
+            </div>
+
+
+            <div class="col">
+                <button class="btn btn-modal" (click)="checkLoadedPlaylist()">Carica</button>
+
+
+            </div>
+
+        </div>
+
+
+    </form>
+
+    <ng-container *ngIf="viewMode == 'edit' || (this.playlist && this.playlist.playlist && this.playlist.playlist.length>0)">
+
+
+        
+
+        <h3>Gestione coda</h3>
+
+        <ng-container *ngIf="this.playlist.playlist && this.playlist.playlist.length>0">
+
+
+
+            <div cdkDropList class="example-list mt-3" (cdkDropListDropped)="drop($event)">
+                <li [ngClass]="i==this.indexPlaylist?'activeSong':null"
+                    class="list-group-item playlistComp itemPlaylist d-flex justify-content-between"
+                    *ngFor="let song of playlist.playlist;let i=index" cdkDrag>
+                    {{song.title}}
+
+                    <i class='bx bxs-trash-alt deleteIcon' (click)="deleteSongFromPlaylist(i)"></i>
+                </li>
+
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="!this.playlist.playlist || this.playlist.playlist.length==0">
+            <div class="alert alert-dark" role="alert">
+                La coda di riproduzione è vuota
+            </div>
+
+        </ng-container>
+
+    </ng-container>
+
+    <div class="form-row d-flex justify-content-end ">
+        <button *ngIf="viewMode=='add'" type="submit" class="btn btn-primary mb-2 btn-modal" (click)="createPlaylist()">Crea</button>
+        <button *ngIf="viewMode=='edit'" type="submit" class="btn btn-primary mb-2 btn-modal mt-2" (click)="updatePlaylist()">Modifica</button>
+
+    </div>
+
+</div>

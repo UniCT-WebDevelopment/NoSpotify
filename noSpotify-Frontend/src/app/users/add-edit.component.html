@@ -1,0 +1,50 @@
+﻿
+<div class="colorSpotify mt-5">
+<h1 *ngIf="isAddMode">Aggiungi utente</h1>
+<h1 *ngIf="!isAddMode">Modifica utente</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-sm-12">
+            <label for="firstName">Nome</label>
+            <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">Il nome è obbligatorio</div>
+            </div>
+        </div>
+        <div class="form-group col-sm-12">
+            <label for="lastName">Cognome</label>
+            <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Il cognome è obbligatorio</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-sm-12">
+            <label for="username">Username</label>
+            <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">L'username è obbligatorio</div>
+            </div>
+        </div>
+        <div class="form-group col-sm-12">
+            <label for="password">
+                Password
+                <em *ngIf="!isAddMode">(Lascia vuota per mantenere la stessa password)</em>
+            </label>
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password obbligatoria</div>
+                <div *ngIf="f.password.errors.minlength">La password deve contenere almeno 6 carartteri</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group d-flex justify-content-center">
+        <button [disabled]="loading" class="btn btn-spotify btnLogin mt-2 p-10px" >
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Modifica
+        </button>
+    </div>
+</form>
+
+</div>

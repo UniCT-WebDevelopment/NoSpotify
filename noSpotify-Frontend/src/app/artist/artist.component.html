@@ -1,0 +1,98 @@
+<ng-container *ngIf="this.artist">
+
+    <img class="position-fixed opacity-0" [src]="this.artist.thumbnails[0].url" alt="" referrerpolicy="no-referrer">
+    <div class="position-relative" referrerpolicy="no-referrer">
+
+
+
+        <div class="row d-flex mb-5 artistImage" referrerpolicy="no-referrer"
+            [style]="'background-image:url('+this.artist.thumbnails[0].url+')'">
+
+
+        </div>
+        <div
+            class="col-12 col-md-6 d-flex flex-column align-content-center justify-content-center m-2 position-absolute bottom-min15">
+
+
+            <h1 class="titleClass text-white line-height-1">{{this.artist.name}}</h1>
+            <h3 class=" ml-1 text-white fw-bold">ARTISTA</h3>
+
+
+        </div>
+
+    </div>
+
+
+    <ng-container *ngIf="singoliList && singoliList.length >0">
+
+        <h1 class="subTitle">Singoli</h1>
+
+
+
+        <ul class="list-group bgcolor" *ngFor="let op of singoliList;let i = index">
+            <li class="list-group-item bgcolor borderList text-white">
+                <div class="d-flex justify-content-start align-items-center">
+                    <div class="dropdown">
+                        <button class="btn text-white " type="button" [id]="'dropdownMenuButton1-'+i"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class='bx bx-dots-vertical-rounded font25px line-height-34'></i>
+                        </button>
+                        <ul class="dropdown-menu" [attr.aria-labelledby]="'dropdownMenuButton1-'+i">
+                            <li><a class="dropdown-item" (click)="addToQueue(op)">Aggiungi alla coda</a></li>
+                            <li><a class="dropdown-item" (click)="addToPlaylist(op)">Aggiungi a playlist </a></li>
+                        </ul>
+                    </div>
+                    <div class=" d-flex justify-content-end"><i (click)="loadAlbum(op.albumId)"
+                            class=' bx bx-play-circle font-size-40px'></i></div>
+                    <div class="ellips"> <img referrerpolicy="no-referrer" [src]="op.thumbnailUrl" alt=""
+                            class="ml-10px w-40px"></div>
+
+
+                    <div class="ellipsTitle">{{op.title}}</div>
+                    <div class="ellips hidemobile" *ngIf="op.year">{{op.year}}</div>
+
+
+                </div>
+            </li>
+        </ul>
+
+    </ng-container>
+
+    <ng-container *ngIf="albumList && albumList.length >0">
+
+
+        <div class="mt-4">
+
+            <h1 class="subTitle">Album</h1>
+
+
+            <div class="d-flex overflowx-scroll">
+
+                <ng-container *ngFor="let item of albumList">
+
+                    <div class="m-3 container">
+                        <img referrerpolicy="no-referrer" [src]="item.thumbnailUrl" class="h-200px">
+                        <div class="overlay d-flex justify-content-end align-items-center flex-column"  [routerLink]="'/album/'+item.albumId">
+                            <div>
+                                <i (click)="loadAlbum(item.albumId)"
+                                    class='bx bx-play-circle text-white cursorPointer font-size-70px'></i>
+
+                            </div>
+                            <br>
+                            <div>
+                                <h1
+                                    class="fw-bold font15px text-white cursorPointer">
+                                    {{item.title}}</h1>
+
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+
+            </div>
+
+        </div>
+    </ng-container>
+
+</ng-container>

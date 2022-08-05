@@ -1,0 +1,79 @@
+<div class="modalStyle">
+
+    <h2>SharePlay</h2>
+
+
+    <ng-container *ngIf="!isInRoom()">
+
+        <div class="row d-flex justify-content-center flex-direction-row">
+            <div class="col-12 col-sm-6 d-flex justify-content-center p-3 leftdiv">
+
+                <button class="btn btn-modal w-100 h-100 text-white" (click)="createRoom()">
+                    <i class='bx bxs-share-alt font40px'></i><br>
+                    Crea stanza</button>
+            </div>
+
+
+            <div class="col-12 col-sm-6">
+                <div class="row d-flex flex-flow-column p-3">
+
+                    SharePlay Room
+                    <input type="text" class="form-control" placeholder="ID stanza" [(ngModel)]="roomId" />
+
+                    <button class="btn btn-modal mt-2 text-white" (click)="joinRoom()">Partecipa</button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </ng-container>
+
+
+    <ng-container *ngIf="isInRoom() && this.room">
+
+
+
+
+        <h3>Id stanza </h3>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" disabled [value]="room.roomId" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" (click)="copyId()">Copia ID <i class='bx bxs-copy'></i></button>
+                <button class="btn btn-danger" (click)="disconnectFromRoom()">Disconnetti</button>
+            </div>
+        </div>
+
+
+        <h3>Utenti</h3>
+
+
+        <ng-container *ngIf="this.room && this.room.users &&  this.room.users.length>0">
+
+
+
+            <div cdkDropList class="example-list mt-3">
+                <li class="list-group-item playlistComp itemPlaylist d-flex justify-content-between"
+                    *ngFor="let user of room.users;let i=index">
+                    {{user.user.username}}
+
+                    <!-- <i class='bx bxs-trash-alt deleteIcon' (click)="deleteSongFromPlaylist(i)"></i> -->
+                </li>
+
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="!this.room.users || this.room.users.length==0">
+            <div class="alert alert-dark" role="alert">
+                Nessun utente in stanza
+            </div>
+
+        </ng-container>
+
+    </ng-container>
+
+</div>
