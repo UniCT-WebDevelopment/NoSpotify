@@ -94,7 +94,7 @@ export class PlaylistListComponent implements OnInit {
 
 
   loginSpotify() {
-    var CLIENT_ID = 'CLIENT_ID';
+    var CLIENT_ID = environment.CLIENT_ID;
     var REDIRECT_URI = 'http://localhost:4000/spotifyImport';
     function getLoginURL(scopes) {
       return 'https://accounts.spotify.com/authorize?client_id=' + CLIENT_ID +
