@@ -3,8 +3,7 @@
 
 # NoSpotify
 
-[![Screenshot-from-2022-08-05-03-23-47.png]([https://i.postimg.cc/NjFPDs1K/Screenshot-from-2022-08-05-03-23-47.png](https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg))](https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg)
-
+[Angular-full-color-logo.png](https://postimg.cc/yW2Lb9Hv)
 
 # Features
 
