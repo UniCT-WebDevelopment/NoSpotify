@@ -3,8 +3,7 @@
 
 # NoSpotify
 
-{:.center}
-[![nospotifylogo.png](https://i.postimg.cc/fRLSbLdT/nospotifylogo.png)](https://postimg.cc/vcJZqGXp)
+->[![nospotifylogo.png](https://i.postimg.cc/fRLSbLdT/nospotifylogo.png)](https://postimg.cc/vcJZqGXp)<-
 
 
 
@@ -75,6 +74,3 @@ NoSpotify has been developed by Mirko Distefano, Computer Science student at Dep
 Email: mirko.distefano@live.it
 
 
-.center {
-  text-align: center;
-}
