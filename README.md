@@ -23,7 +23,7 @@
   <img width="500" src="https://i.postimg.cc/bJQPLbZT/Screenshot-from-2022-08-05-13-26-58.png">
     <img width="500" src="https://i.postimg.cc/XqJ2X66C/Screenshot-from-2022-08-05-13-27-47.png">
 
-</p>
+</div>
 
 
 
