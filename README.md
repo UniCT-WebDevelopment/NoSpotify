@@ -2,6 +2,7 @@
 [![Screenshot-from-2022-08-05-03-23-47.png](https://i.postimg.cc/NjFPDs1K/Screenshot-from-2022-08-05-03-23-47.png)](https://postimg.cc/bZXTNjVP)
 
 # NoSpotify
+[![nospotifylogo.png](https://i.postimg.cc/fRLSbLdT/nospotifylogo.png)](https://postimg.cc/vcJZqGXp)
 [![angular-nodejs.webp](https://i.postimg.cc/C5TbBggr/angular-nodejs.webp)](https://postimg.cc/sQmMqb15)
 # Features
 
