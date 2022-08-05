@@ -26,13 +26,13 @@
 
 # Features
 
-- Listen to all your music, search for a specific track, band or artist.
-- Add a song to your playlists.
+- Listen to all your music, search for a specific track, band or artist 🔉
+- Add a song to your playlists 
 - Create Playlists.
 - Import Playlists from Spotify 
-- SharePlay
-- Import Playlists from external file (.nospotify)
-- Change your profile settings.
+- SharePlay 👦 🎶 👦
+- Import Playlists from external file (.nospotify) 📂
+- Change your profile settings ✏
 
 
 # Installation
