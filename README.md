@@ -42,7 +42,7 @@ $ make init-backend
 $ make init-frontend
 ```
 
-Other commands
+- Other commands
 
 Clean the development environment (refresh node modules and start)
 ```sh
@@ -50,12 +50,12 @@ $ make clear-backend
 $ make clear-frontend
 ```
 
-Build GUI (dist folder)
+- Build GUI (dist folder)
 ```sh
 $ make build-frontend
 ```
 
-Run 
+- Run commands
 ```sh
 $ make run-frontend
 $ make run-backend
