@@ -13,7 +13,7 @@
 ### Live [Demo](http://nospotify.me:4000)
 
 
-## Listen your music totally free and without any limitations ! 🎵🎵🎵
+## 🎵 Listen your music totally free and without any limitations !
 <p align="center">
   <img  src="https://i.postimg.cc/BZKddcwJ/Screenshot-from-2022-08-05-03-23-32.png">
 </p>
