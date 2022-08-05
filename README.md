@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img width="450" height="200" src="https://i.postimg.cc/BZKddcwJ/Screenshot-from-2022-08-05-03-23-32.png">
+  <img  src="https://i.postimg.cc/BZKddcwJ/Screenshot-from-2022-08-05-03-23-32.png">
 </p>
 
 
