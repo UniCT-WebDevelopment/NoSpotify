@@ -6,7 +6,7 @@
 
 
 <p align="center">
-  <img width="460" height="300" src="[http://www.fillmurray.com/460/300](https://i.postimg.cc/fRLSbLdT/nospotifylogo.png)">
+  <img width="460" height="300" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
 </p>
 
 
