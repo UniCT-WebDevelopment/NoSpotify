@@ -16,7 +16,10 @@
 
 
 # Installation
-NoSpotify requires [Node.js](https://nodejs.org/) v16+ to run.
+NoSpotify requires 
+- [Node.js](https://nodejs.org/) v16+.
+- [Angular](https://angular.io/) v10+.
+
 
 ```sh
 $ make run-db
