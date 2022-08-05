@@ -12,11 +12,8 @@
 
 ### Demo
 
-<div style="text-align: right"> your-text-here </div>
-<p align="center">
+       <a align="center" href="http://nospotify.me:4000">Live Demo</a>
 
-  <a align="center" href="http://nospotify.me:4000">Live Demo</a>
-</p>
 
 <p align="center">
   <img  src="https://i.postimg.cc/BZKddcwJ/Screenshot-from-2022-08-05-03-23-32.png">
