@@ -83,7 +83,7 @@ $ make run-backend
 
 ```
 
-# Author
+# Author 💻 👦
 NoSpotify has been developed by Mirko Distefano, Computer Science student at Department of Mathematics and Computer Science, University of Catania, Italy. 
 
 Email: mirko.distefano@live.it
