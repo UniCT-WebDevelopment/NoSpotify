@@ -20,6 +20,14 @@
 
 
 <p align="center">
+  <img  src="https://i.postimg.cc/BZKddcwJ/Screenshot-from-2022-08-05-03-23-32.png">
+    <img  src="https://i.postimg.cc/BZKddcwJ/Screenshot-from-2022-08-05-03-23-32.png">
+
+</p>
+
+
+
+<p align="center">
     <img width="500" height="300" src="https://i.postimg.cc/C5TbBggr/angular-nodejs.webp">
 </p>
 
