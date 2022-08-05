@@ -95,7 +95,7 @@ $ make run-backend
 In order to use the import function from spotify you need to create a spotify app through the [developer panel](https://developer.spotify.com/)
 and insert email, password and client id in the configuration file (backend config file).
 It is also necessary to insert the correct CLIENT_ID in the callback made by the angular client
-Function 'loginSpotify' [Playlist-List.component.ts]
+#### Function 'loginSpotify' [Playlist-List.component.ts]
 
 
 
