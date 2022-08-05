@@ -98,6 +98,9 @@ It is also necessary to insert the correct CLIENT_ID in angular enviroment confi
 
 
 
+<p align="center">
+  <img  src="https://i.postimg.cc/WbThxmcx/Screenshot-from-2022-08-05-13-29-37.png">
+</p>
 
 
 # Author 💻 👦
