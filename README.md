@@ -14,6 +14,16 @@
 - Import Playlists from external file (.nospotify)
 - Change your profile settings.
 
+
+# Installation
+NoSpotify requires [Node.js](https://nodejs.org/) v16+ to run.
+
+```sh
+$ make run-db
+$ make init-backend
+$ make init-frontend
+```
+
 # Author
 NoSpotify has been developed by Mirko Distefano, Computer Science student at Department of Mathematics and Computer Science, University of Catania, Italy. 
 
