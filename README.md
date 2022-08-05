@@ -19,9 +19,9 @@
 </p>
 
 
-<p align="center">
-  <img  src="https://i.postimg.cc/BZKddcwJ/Screenshot-from-2022-08-05-03-23-32.png">
-    <img  src="https://i.postimg.cc/BZKddcwJ/Screenshot-from-2022-08-05-03-23-32.png">
+<div align="center">
+  <img width="100" src="https://i.postimg.cc/bJQPLbZT/Screenshot-from-2022-08-05-13-26-58.png">
+    <img width="100" src="https://i.postimg.cc/XqJ2X66C/Screenshot-from-2022-08-05-13-27-47.png">
 
 </p>
 
