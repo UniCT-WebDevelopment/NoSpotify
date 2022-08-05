@@ -19,6 +19,7 @@
 NoSpotify requires 
 - [Node.js](https://nodejs.org/) v16+.
 - [Angular](https://angular.io/) v10+.
+- [Docker](https://docs.docker.com/)
 
 First time setup
 ```sh
@@ -31,6 +32,11 @@ Clean the development environment (refresh node modules and start)
 ```sh
 $ make clear-backend
 $ make clear-frontend
+```
+
+Build GUI (dist folder)
+```sh
+$ make build-frontend
 ```
 
 # Author
