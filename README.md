@@ -12,7 +12,7 @@
 
 ### Demo
 
-       <a align="center" href="http://nospotify.me:4000">Live Demo</a>
+<a align="center" href="http://nospotify.me:4000">Live Demo</a>
 
 
 <p align="center">
