@@ -7,7 +7,7 @@
 
 <p align="center">
 
-  <img width="500" height="220" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
+  <img width="500" height="200" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
 </p>
 
 ### Live [Demo](http://nospotify.me:4000) 🔗
