@@ -2,8 +2,8 @@
 [![Screenshot-from-2022-08-05-03-23-47.png](https://i.postimg.cc/NjFPDs1K/Screenshot-from-2022-08-05-03-23-47.png)](https://postimg.cc/bZXTNjVP)
 
 # NoSpotify
+ <img align="left" width="600" height="200" src="https://postimg.cc/9D0zw44H">
 
-[![angular-nodejs.webp](https://i.postimg.cc/g2qh58mj/angular-nodejs.webp)](https://postimg.cc/9D0zw44H)
 # Features
 
 - Listen to all your music, search for a specific track, band or artist.
