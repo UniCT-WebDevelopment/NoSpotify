@@ -1,0 +1,95 @@
+﻿<div class="d-flex" id="wrapper">
+
+  <div class="border-right bgcolor" id="sidebar-wrapper" [ngClass]="status ? 'hide' : 'show'">
+    <div class="showBtnMenuMobile">
+      <i class='bx bx-menu position-absolute text-white font50px' (click)="clickEvent()"></i>
+
+    </div>
+    <img src="../assets/img/logo.png" class="h-180px">
+    <div class="list-group list-group-flush">
+
+      <div class="input-group mb-3 p-15px" *ngIf="isLogged()">
+        <input type="text" class="form-control searchBar" placeholder="Cerca" id="searchBox"
+          (keydown.enter)="onKeyDownEvent($event)">
+        <div class="input-group-append">
+          <div class="input-group-text searchBarAppend" (click)="search()">
+            <i class='bx bx-search-alt-2'></i>
+          </div>
+        </div>
+      </div>
+
+
+      <ng-container *ngIf="isLogged()">
+
+        <a [ngClass]="this.router.url === '/home'?'active':null" class="list-group-item list-group-item-action  bgcolor" (click)="this.screenWidth<800? clickEvent():null"
+          [routerLink]="'/home'">Home</a>
+        <a class="list-group-item list-group-item-action  bgcolor" (click)="openPlaylistList()">Gestione Playlist</a>
+
+        <a [ngClass]="this.router.url === '/users/edit'?'active':null"  class="list-group-item list-group-item-action  bgcolor" (click)="this.screenWidth<800? clickEvent():null"
+          [routerLink]="'/users/edit/'">Account</a>
+        <a class="list-group-item list-group-item-action  bgcolor" (click)="logout()">Logout</a>
+
+      </ng-container>
+
+      <a class="list-group-item list-group-item-action  bgcolor" *ngIf="!isLogged()" (click)="clickEvent()"
+        [routerLink]="'/login'">Login</a>
+
+    </div>
+  </div>
+
+  <div id="page-content-wrapper">
+
+    <nav class="navbar navbar-expand-lg position-absolute bg-transparent zindex-2"  id="headerBar">
+
+      <div class="container-fluid ">
+        <i class='bx bx-menu text-white font50px' (click)="clickEvent()" ></i>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid mainContainerFluid" 
+      [ngStyle]="{'margin-bottom': isLogged()?'200px':'0'}">
+      <router-outlet></router-outlet>
+      <app-player *ngIf="isLogged()"></app-player>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>
+
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 1)" size="small" template="<img src='./assets/spinner.gif' />">
+</ngx-spinner>
+
+<ng-snotify></ng-snotify>
+
+<!-- /#wrapper -->
+
+<div class="initialVideo" id="startVideo">
+  <!-- The video -->
+
+
+  <video autoplay muted loop id="myVideo" oncanplay="this.muted=true">
+    <source src="../assets/backgroundinit.mp4" type="video/mp4">
+  </video>
+
+
+
+  <!-- Optional: some overlay text to describe the video -->
+  <div class="content">
+    <!-- <div class=" d-flex justify-content-center"> -->
+    <img src="../../assets/img/nospotifylogo.png" class="wLogoMobile">
+
+    <button id="myBtn" (click)="hide()">Accedi</button>
+  </div>
+</div>
+

@@ -1,0 +1,20 @@
+﻿<div class="p-4 wrapHome">
+  <div class="containerHome filterBrightness" style="background-image: url('../../assets//img/backgroundcover.jpg')">
+
+    <div class="d-flex justify-content-center align-items-center flex-column h-100 w-100 ">
+      <!-- <div class=" d-flex justify-content-center"> -->
+      <img src="../../assets/img/nospotifylogo.png" class="filterShadow wLogoMobile">
+
+      <div class="input-group mb-3 w-70-perc p-15px">
+        <input type="text" class="form-control searchBar bg-white text-black" placeholder="Cerca Artista,album o musica"
+          id="searchBoxHome" (keydown.enter)="onKeyDownEvent($event)">
+        <div class="input-group-append">
+          <div class="input-group-text searchBarAppend" (click)="search()">
+            <i class='bx bx-search-alt-2'></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

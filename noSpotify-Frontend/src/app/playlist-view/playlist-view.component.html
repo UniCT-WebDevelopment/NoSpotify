@@ -1,0 +1,70 @@
+<div class="bgcolor " *ngIf="this.musicList && this.musicList.length>0">
+
+
+    <div class="row d-flex mb-5 position-relative h-100">
+
+        <img id="posterArtist" class="p-0" [src]="musicList[0].thumbnailUrl" referrerpolicy="no-referrer" alt="">
+        <div class="col-12 col-md-6 d-flex flex-column  m-2 albumInfo position-absolute bottom-0">
+
+            <h3 class=" text-white fw-bold">PLAYLIST</h3>
+
+            <h1 class="titleClass text-white line-height-1"> {{this.playlist.playlistName}}</h1>
+
+            <h4 class=" text-white fw-bold font20px">{{this.playlist.ownerName}}</h4>
+            <div>
+                <i (click)="playAlbum()" class=' bx bx-play-circle mt-2 text-white btnPlaylist '></i>
+                <i (click)="openModalEditPlaylist()" class='bx bxs-playlist mt-2 text-white btnPlaylist'></i>
+
+                <i (click)="downloadPlaylist()" class=' bx bx-download mt-2 text-white btnPlaylist'></i>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <h3 class=" text-white ml-3 fw-bold font25px">Playlist</h3>
+
+
+    <ul class="list-group bgcolor" *ngFor="let op of musicList;let i = index">
+        <li class="list-group-item bgcolor borderList text-white">
+            <div class="d-flex justify-content-start align-items-center">
+                <div class="dropdown">
+                    <button class="btn text-white " type="button" [id]="'dropdownMenuButton1-'+i"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class='bx bx-dots-vertical-rounded font25px line-height-34'></i>
+                    </button>
+                    <ul class="dropdown-menu" [attr.aria-labelledby]="'dropdownMenuButton1-'+i">
+                        <li><a class="dropdown-item" (click)="addToQueue(op)">Aggiungi alla coda</a></li>
+                        <li><a class="dropdown-item" (click)="addToPlaylist(op)">Aggiungi a playlist </a></li>
+                    </ul>
+                </div>
+                <!-- <div class=" d-flex justify-content-end "><i (click)="playMusic(op)"
+                        class=' bx bx-play-circle w-40p font40px'></i></div> -->
+
+                        <i (click)="playMusic(op)" class='bx bx-play-circle  font40px' *ngIf="!checkCurrentSong(op.youtubeId)"></i>
+                        <i (click)="pausePlayer()" class='bx bx-pause-circle  font40px' *ngIf="checkCurrentSong(op.youtubeId)"></i>
+
+                <div class="ellips"> <img referrerpolicy="no-referrer" [src]="op.thumbnailUrl" alt=""
+                        class="w-40p ml-10px"></div>
+
+
+                <div class="ellipsTitle">{{op.title}}</div>
+                <div class="ellipsTitle text-white line-height-1">
+                    <ng-container *ngFor="let artist of op.artists">
+
+                        {{artist.name}} &nbsp;
+                    </ng-container>
+
+                </div>
+
+                <div class="ml-5">{{op.duration.label}}</div>
+
+
+
+            </div>
+        </li>
+    </ul>
+
+</div>

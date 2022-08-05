@@ -1,0 +1,152 @@
+<div class="bgcolor m-4">
+
+
+
+    <h2 class="titleClass pt-50px">Risultati trovati per &nbsp;" {{getQueryName()}} "</h2>
+
+
+    <ng-container *ngIf="viewMode == 'top'">
+
+        <div *ngIf="musicList && musicList.length">
+            <h1 class="titleClass fw-bold">Canzoni</h1>
+
+
+            <ul class="list-group bgcolor" *ngFor="let op of musicList;let i = index">
+                <li class="list-group-item bgcolor borderList text-white" *ngIf="i<5">
+                    <div class="d-flex align-items-center" style="justify-content: space-between !important">
+
+
+                        <div class=" d-flex justify-content-end align-items-center">
+                            <div class="dropdown">
+                                <button class="btn text-white " type="button" [id]="'dropdownMenuButton1-'+i"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class='bx bx-dots-vertical-rounded font25px line-height-34'></i>
+                                </button>
+                                <ul class="dropdown-menu" [attr.aria-labelledby]="'dropdownMenuButton1-'+i">
+                                    <li><a class="dropdown-item" (click)="addToQueue(op)">Aggiungi alla coda</a></li>
+                                    <li><a class="dropdown-item" (click)="addToPlaylist(op)">Aggiungi a playlist </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <i (click)="playMusic(op)" class='bx bx-play-circle w-40px font40px' *ngIf="!checkCurrentSong(op.youtubeId)"></i>
+                            <i (click)="pausePlayer()" class='bx bx-pause-circle w-40px font40px' *ngIf="checkCurrentSong(op.youtubeId)"></i>
+
+                            <div class=""> <img referrerpolicy="no-referrer" [src]="op.thumbnailUrl" alt=""
+                                    class="ml-10px w-40px"></div>
+                        </div>
+
+
+
+                        <div class="ellips">{{op.title}}</div>
+                        <div class="ellips hidemobile" *ngIf="op.artists[0] && op.artists[0].name">
+                            {{op.artists[0].name}}</div>
+                        <div class="ellips hidemobile" *ngIf="!op.artists[0] || !op.artists[0].name">Not found</div>
+
+                        <div class="ellips hidemobile">{{op.album}}</div>
+
+                        <div class="ellips duration hidemobile">{{op.duration.label}}</div>
+
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="mt-4" *ngIf="albumList && albumList.length">
+
+            <h1 class="titleClass fw-bold">Album</h1>
+
+
+            <div class="d-flex overflowx-scroll">
+
+                <ng-container *ngFor="let item of albumList">
+
+                    <div class="m-3 container">
+                        <img referrerpolicy="no-referrer" [src]="item.thumbnailUrl" class="h-200px">
+                        <div class="cursorPointer overlay d-flex justify-content-end align-items-center flex-column" [routerLink]="'/album/'+item.albumId"> 
+                            <div>
+                                <i (click)="loadAlbum(item.albumId)"  style="z-index: 99"
+                                    class=' bx bx-play-circle cursorPointer text-white font-size-70px'></i>
+
+                            </div>
+                            <br>
+                            <div>
+                                <h1 
+                                    class="fw-bold text-white cursorPointer font15px">{{item.title}}</h1>
+
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+
+            </div>
+
+
+            <div class="mt-4 margin-top-100px" *ngIf="artistList && artistList.length">
+
+                <h1 class="titleClass fw-bold">Artisti</h1>
+
+
+
+                <div class="d-flex overflowx-scroll">
+
+                    <ng-container *ngFor="let item of artistList">
+
+                        <div class="m-3 container cursorPointer" [routerLink]="'/artist/'+item.name+'/'+item.artistId">
+                            <img referrerpolicy="no-referrer" [src]="item.thumbnailUrl" class="h-200px">
+                            <div class="overlay d-flex justify-content-end align-items-center flex-column">
+
+                                <div>
+                                    <h1 class="fw-bold text-white font15px">{{item.name}}</h1>
+
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="mt-4 margin-top-100px" *ngIf="playlistList && playlistList.length">
+
+                <h1 class="titleClass fw-bold">Playlist</h1>
+
+
+
+                <div class="d-flex overflowx-scroll">
+
+                    <ng-container *ngFor="let playlist of playlistList">
+
+                        <div *ngIf="playlist.playlist && playlist.playlist[0] && playlist.playlist[0].thumbnailUrl"
+                            class="m-3 container cursorPointer" [routerLink]="'/playlist/'+playlist.id">
+                            <img *ngIf="playlist.playlist && playlist.playlist[0] && playlist.playlist[0].thumbnailUrl"
+                                referrerpolicy="no-referrer" [src]="playlist.playlist[0].thumbnailUrl" class="h-200px">
+                            <div class="overlay d-flex justify-content-end align-items-center flex-column">
+
+                                <div>
+                                    <h1 class="fw-bold text-white font15px">{{playlist.playlistName}}</h1>
+
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </ng-container>
+
+
+
+</div>

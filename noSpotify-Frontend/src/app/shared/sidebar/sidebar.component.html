@@ -1,0 +1,11 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+  <div class="toggle-button flex-row-reverse" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+      <i class="fa fa-fw fa-angle-{{collapsed?'right':'left'}}"></i>&nbsp;
+      <!-- <span>{{ '' }}</span> -->
+  </div>
+  <div class="list-group cursor-pointer">
+
+     
+  </div>
+
+</nav>

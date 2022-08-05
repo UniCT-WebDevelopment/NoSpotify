@@ -1,0 +1,136 @@
+<div class="modalStyle">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="playlistModalTitle">
+
+            <ng-container *ngIf="modalAction == 'normal'">
+                Gesione Playlist
+            </ng-container>
+
+            <ng-container *ngIf="modalAction == 'addMusic'">
+                Aggiungi a playlist
+            </ng-container>
+
+            <ng-container *ngIf="modalAction == 'importQueue'">
+                Riproduci playlist
+            </ng-container>
+
+
+        </div>
+
+        <div>
+
+
+
+            <div class="btn-group">
+                <button class="btn btn-primary btn-modal text-white" (click)="openModalSpotify(templateSpotify)"
+                    *ngIf="modalAction == 'normal'">
+                    <div class="d-flex align-items-center">
+                        Spotify
+                        <i class='ml-2 bx  bxl-spotify'></i>
+                    </div>
+                </button>
+                <button *ngIf="checkSpotifyBearer() && modalAction == 'normal'" type="button"
+                    class="btn btn-sm btn-secondary " data-bs-toggle="dropdown" aria-expanded="false"
+                    (click)="deleteSpotifyBearer()">
+                    <i class='bx bx-unlink'></i>
+                </button>
+
+            </div>
+
+
+            <button class="ml-2 btn btn-primary btn-modal" (click)="openModalCreatePlaylist()"
+                *ngIf="modalAction == 'normal'">
+
+                <i class='bx bx-plus-medical text-white'></i></button>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <ul class="list-group" *ngIf="listPlaylist && listPlaylist.length">
+        <li class="list-group-item itemPlaylistList" *ngFor="let playlist of listPlaylist"
+            (click)="performAction(playlist)">
+
+            <div class="d-flex justify-content-between">
+                <div> {{playlist.playlistName}}
+                </div>
+                <div class="d-flex align-items-center" *ngIf="modalAction == 'normal'">
+
+                    <i  class='bx bx-play-circle font22px' (click)="setPlaylist(playlist)"></i>
+                    <i  class='ml-2 bx bxs-download font22px' (click)="downloadPlaylist(playlist)"></i>
+
+                    <i  class='ml-2 bx bxs-edit font22px' (click)="openModalEditPlaylist(playlist)"></i>
+
+
+                    <i class="font20px" class='ml-2 bx bxs-trash-alt deleteIcon'
+                        (click)="openModalDeletePlaylist(templateDelete,playlist)"></i>
+
+                </div>
+
+            </div>
+
+        </li>
+
+    </ul>
+
+
+    <ng-container *ngIf="!this.listPlaylist || this.listPlaylist.length==0">
+
+        <div class="alert alert-dark" role="alert">
+            Nessuna playlist presente
+        </div>
+
+    </ng-container>
+
+</div>
+
+
+
+<ng-template #templateDelete>
+    <div class="modal-body text-center modalStyle">
+        <p>Sei sicuro di voler eliminare la playlist selezionata?</p>
+        <button type="button" class="btn btn-default btn-secondary mn-w45px" (click)="confirmDelete()">Si</button>
+        <button type="button" class="btn btn-primary btn-modal ml-2 mn-w45px" (click)="decline()">No</button>
+    </div>
+</ng-template>
+
+<ng-template #templateSpotify>
+    <div class="modalStyle">
+        <div class="modal-header">
+            <div class="playlistModalTitle">
+
+                <label class="modal-title pull-left">Spotify playlist</label>
+
+            </div>
+        </div>
+        <div class="modal-body">
+            <div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Indirizzo email Spotify</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        [(ngModel)]="emailSpotify" placeholder="Email">
+                    <!-- <small id="emailHelp" class="form-text text-muted"></small> -->
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username Spotify</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        [(ngModel)]="usernameSpotify" placeholder="Email">
+                    <!-- <small id="emailHelp" class="form-text text-muted"></small> -->
+                </div>
+
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary btn-modal text-white"
+                        (click)="importSpotify()">Avanti</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

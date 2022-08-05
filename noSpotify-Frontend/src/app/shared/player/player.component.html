@@ -1,0 +1,139 @@
+<ng-container>
+    <yt-player id="mainPlayer" class="playerYoutube"
+        *ngIf="this.playlist && this.playlist[indexPlaylist] && this.playlist[indexPlaylist].youtubeId" #player
+        [videoId]="this.playlist[indexPlaylist].youtubeId" (stateChange)="onStateChange($event)"></yt-player>
+
+
+    <div class="d-flex playerBar justify-content-center">
+        <div>
+            <!-- <i class='bx bxs-left-arrow' (click)="prevSong()"></i> -->
+            <i class='bx bx-skip-previous iconSkip' (click)="prevSong()"></i>
+        </div>
+
+        <div class="playBtn" *ngIf="!isPlaying()">
+            <i class='bx bx-play playBtn' (click)="togglePlay(true)"></i>
+        </div>
+
+        <div class="playBtn" *ngIf="isPlaying()">
+            <i class='bx bx-pause playBtn' (click)="togglePlay(true)"></i>
+        </div>
+
+        <div>
+            <i class='bx bx-skip-next iconSkip' (click)="nextSong()"></i>
+            <!-- <i class='bx bxs-right-arrow' (click)="nextSong()"></i> -->
+        </div>
+
+        <div class="m7p hidemobile font15px">
+            <span>{{getCurrentTime()}}</span>
+        </div>
+
+        <div class="w-100 m7p containerPlayer">
+            <input [disabled]="disableSeek()" type="range" #seconds [value]="disableSeek()?0:getCurrentTimeInSeconds()"
+                class="form-range w-100" id="customRange1" min="0" [max]="getDurationInSeconds()"
+                (input)="seekTo(seconds.value,true)">
+
+            <div id="seekBarProgress" class="zindex--1"></div>
+        </div>
+
+        <div class="m7p hidemobile font15px">
+            <span>{{getDuration()}}</span>
+        </div>
+
+
+        <div class="m7p">
+            <i class='bx bx-repeat' [ngClass]="this.repeat?'btnActive':null" (click)="repeatBtn()"></i>
+        </div>
+
+        <div class="m7p">
+            <i class='bx bx-shuffle' [ngClass]="this.shuffle?'btnActive':null" (click)="shuffleBtn()"></i>
+
+        </div>
+
+        <div class="m7p">
+            <i class='bx bxs-playlist' (click)="openModalPlaylist(modalPlaylist)"></i>
+        </div>
+
+
+        <div class="m7p">
+            <i class='bx bxs-share-alt' (click)="openSharePlay()"></i>
+        </div>
+
+
+
+        <div class="m7p showHidePlayer" (click)="showHidePlayer()">
+            <i *ngIf="!showPlayer" class='bx bxs-up-arrow'></i>
+            <i *ngIf="showPlayer" class='bx bxs-down-arrow'></i>
+
+        </div>
+
+
+        <div class="m7p" (click)="muteSwitch()">
+            <ng-container *ngIf="!isMuted">
+                <i class='bx bxs-volume-full'></i>
+            </ng-container>
+
+            <ng-container *ngIf="isMuted">
+                <i class='bx bxs-volume-mute'></i>
+            </ng-container>
+        </div>
+
+        <div class="hidemobile position-relative">
+            <input type="range" min="0" max="100" class="form-range w-100" id="rangeVolume" #volume
+                (input)="setVolume(volume.value)">
+            <div id="seekBarVolume" class="zindex--1"></div>
+
+        </div>
+
+    </div>
+
+
+
+</ng-container>
+
+
+<ng-template #modalPlaylist let-modal>
+    <div class="modal-header d-flex align-items-center playerMainTitle">
+        <span>
+            Gestione Coda di Riproduzione</span>
+        <!-- <button type="button" class="btn-close" aria-label="Close" > -->
+
+        <i class='bx bx-x font32px' (click)="modal.dismiss('Cross click')"></i>
+        <!-- </button> -->
+    </div>
+    <div class="modal-body">
+
+        <div class="d-flex justify-content-end mb-4">
+            <button class="btn btn-primary btn-modal text-white" (click)="openPlaylistList()">Importa dalle tue
+                Playlist</button>
+        </div>
+
+
+        <ng-container *ngIf="this.playlist && this.playlist.length>0">
+
+            <span class="playerSubtitle">In riproduzione...</span>
+
+
+            <div cdkDropList class="example-list mt-3" (cdkDropListDropped)="drop($event)">
+                <li [ngClass]="i==this.indexPlaylist?'activeSong':null"
+                    class="list-group-item playlistComp itemPlaylist d-flex justify-content-between"
+                    *ngFor="let song of playlist;let i=index" cdkDrag>
+                    {{song.title}}
+
+                    <i class='bx bxs-trash-alt deleteIcon' (click)="deleteSongFromPlaylist(i)"></i>
+                </li>
+
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="!this.playlist || this.playlist.length==0">
+
+            <div class="alert alert-dark" role="alert">
+                La coda di riproduzione è vuota
+            </div>
+
+        </ng-container>
+
+    </div>
+
+</ng-template>
