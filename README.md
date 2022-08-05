@@ -24,18 +24,18 @@
 </p>
 
 
-# Features
+# Features ⭐
 
 - Listen to all your music, search for a specific track, band or artist 🔉
-- Add a song to your playlists 
-- Create Playlists.
-- Import Playlists from Spotify 
+- Add a song to your playlists 🔍
+- Create Playlists 🆕
+- Import Playlists from Spotify 📰
 - SharePlay 👦 🎶 👦
 - Import Playlists from external file (.nospotify) 📂
-- Change your profile settings ✏
+- Change your profile settings ✏👤
 
 
-# Installation
+# Installation 🔧
 NoSpotify requires 
 - [Node.js](https://nodejs.org/) v16+.
 - [Angular](https://angular.io/) v10+.
@@ -46,7 +46,8 @@ First time setup
 - Configure backend config file
 
 ```sh
-{   //MONGODB CONNECTION STRING (CHECK DOCKER-COMPOSE FOR CREDENTIALS)
+{   
+    //MONGODB CONNECTION STRING (CHECK DOCKER-COMPOSE FOR CREDENTIALS)
     "connectionString": "mongodb://root:rootPassword@localhost:27017/?authSource=admin",
     "secret": "$3cr3tSeRver!", //JWT ENCRYPTION SECRET KEY
     "spotifyEmail":"", //EMAIL ACCOUNT SPOTIFY DEVELOPER
