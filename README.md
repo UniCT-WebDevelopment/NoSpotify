@@ -12,7 +12,7 @@
 
 <p align="center">
 
-  <a style="font-weight:bold" href="http://nospotify.me:4000">Live Demo</a>
+  <a href="http://nospotify.me:4000">Live Demo</a>
 </p>
 
 <p align="center">
