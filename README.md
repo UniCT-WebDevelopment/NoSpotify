@@ -6,11 +6,12 @@
 
 
 <p align="center">
-  <img width="460" height="300" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
+  <img width="500" height="300" src="https://i.postimg.cc/fRLSbLdT/nospotifylogo.png">
+    <img width="500" height="300" src="https://i.postimg.cc/C5TbBggr/angular-nodejs.webp">
+
 </p>
 
 
-[![angular-nodejs.webp](https://i.postimg.cc/C5TbBggr/angular-nodejs.webp)](https://postimg.cc/sQmMqb15)
 # Features
 
 - Listen to all your music, search for a specific track, band or artist.
