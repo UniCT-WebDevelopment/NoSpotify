@@ -131,12 +131,22 @@ export class AppComponent implements OnInit {
     return this.accountService.userValue.id;
   }
 
+
   clickEvent() {
     this.status = !this.status;
+
+    if (this.screenWidth < 800) {
+      if (this.status) document.getElementById("page-content-wrapper").style.display = "none"
+      else document.getElementById("page-content-wrapper").style.display = "block"
+
+    }
+
   }
+
+
   logout() {
-    if(this.screenWidth<800)
-    this.clickEvent();
+    if (this.screenWidth < 800)
+      this.clickEvent();
     this.accountService.logout();
 
     this.snotifyService.success("Logout effettuato", {
@@ -179,9 +189,9 @@ export class AppComponent implements OnInit {
   }
 
   search() {
-    if(this.screenWidth<800)
-    this.clickEvent();
-        setTimeout(() => {
+    if (this.screenWidth < 800)
+      this.clickEvent();
+    setTimeout(() => {
       let searchTitle = (document.getElementById("searchBox") as HTMLInputElement).value
       this.router.navigate(['search', searchTitle]);
     }, 100);
@@ -189,8 +199,8 @@ export class AppComponent implements OnInit {
   }
 
   onKeyDownEvent(event: any) {
-    if(this.screenWidth<800)
-    this.clickEvent();
+    if (this.screenWidth < 800)
+      this.clickEvent();
     let searchTitle = (document.getElementById("searchBox") as HTMLInputElement).value
 
     this.router.navigate(['search', searchTitle]);
@@ -208,8 +218,8 @@ export class AppComponent implements OnInit {
 
 
   openPlaylistList() {
-    if(this.screenWidth<800)
-    this.clickEvent();
+    if (this.screenWidth < 800)
+      this.clickEvent();
 
     const modalRef = this.modalService.open(PlaylistListComponent, { size: 'xl' });
     // modalRef.componentInstance.name = 'World';
